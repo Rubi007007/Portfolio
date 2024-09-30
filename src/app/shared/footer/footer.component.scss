@@ -1,0 +1,56 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 291px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    font-size: 23px;
+    border-top: 4px solid #70E61C;
+
+    .logo-legal-notice {
+        display: flex;
+        flex-direction: column;
+        
+        .logo {
+            font-size: 56px;
+            font-weight: 600;
+            margin-bottom: -16px;
+
+            .purple {
+                color: #9747FF;
+            }
+
+            .green {
+                color: #70E61C;
+            }
+        }
+
+        .legal-notice {
+            font-weight: 200;
+            font-size: 16px;
+            margin-left: 2.5px;
+        }
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: space-between;
+        a {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            .social-media-btn {
+                width: 30px;
+                height: 30px;
+            }
+
+            .mail {
+                margin: 0 32px 0 32px;
+            }
+        }
+    }
+}
