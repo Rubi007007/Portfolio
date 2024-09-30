@@ -1,6 +1,6 @@
 footer {
-    position: absolute;
-    bottom: 0;
+    // position: absolute;
+    // bottom: 0;
     height: 291px;
     width: 100%;
     display: flex;
@@ -18,14 +18,6 @@ footer {
             font-size: 56px;
             font-weight: 600;
             margin-bottom: -16px;
-
-            .purple {
-                color: #9747FF;
-            }
-
-            .green {
-                color: #70E61C;
-            }
         }
 
         .legal-notice {
