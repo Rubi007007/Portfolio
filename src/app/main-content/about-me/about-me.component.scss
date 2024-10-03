@@ -1,53 +1,85 @@
 section {
     margin-top: 100px;
-    margin-bottom: 100px;
     color: #fff;
     max-width: 1920px;
-    padding: 0 100px 0 100px;
-    display: flex;
-    justify-content: space-between;
-    gap: 166px;
-    align-items: center;
     position: relative;
-
-    .about-me {
-        width: 471px;
-        // max-width: 50%;
-
-        h2 {
-            font-size: 90px;
-            font-weight: 700;
-            line-height: 108px;
-        }
-
-        .summary {
-            p {
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 19.2px;
+    
+    .bg-snippet {
+        width: 100%;
+        height: 878.5px;
+        z-index: 2;
+        position: absolute;
+        top: 575px;
+    }
+    
+    #about-me-section {
+        padding: 0 100px 0 100px;
+        display: flex;
+        justify-content: space-between;
+        gap: 166px;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+    
+        .about-me {
+            width: 471px;
+    
+            h2 {
+                font-size: 90px;
+                font-weight: 700;
+                line-height: 108px;
+                margin-bottom: 35px;
+            }
+    
+            .summary {
+                margin-bottom: 35px;
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 19.2px;
+                }
             }
 
-        }
-    }
+            .points {
+                table {
+                    border-collapse: separate;
+                    border-spacing: 0 24px;
 
-    .profile {
-        max-width: 600px;
-        position: relative;
-        // max-width: 50%;
-
-        .profile-picture-background {
-            width: 550px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+                    tr {
+                        vertical-align: top;
+                        
+                        .icon {
+                            margin-right: 16px;
+                        }
+                        td {
+                            max-width: 407px;
+                        }
+                    }
+                }
+            }
         }
-        
-        .profile-picture {
-            width: 350px;
-            z-index: 1;
+    
+        .profile {
+            max-width: 600px;
             position: relative;
+    
+            .profile-picture-background {
+                width: 550px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            
+            .profile-picture {
+                width: 450px;
+                z-index: 3;
+                position: relative;
+            }
         }
-        
     }
+}
+
+table tr td:first-child {
+    width: 64px;
 }
