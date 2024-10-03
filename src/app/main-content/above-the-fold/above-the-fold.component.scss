@@ -1,6 +1,7 @@
 section {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     padding: 0 96px 0 96px;
     margin-bottom: 120px;
@@ -26,11 +27,13 @@ section {
             justify-content: center;
             align-items: center;
             height: 172px;
-            margin-right: 100px;
     
             .i-am {
                 transform: rotate(-90deg);
-                font-size: 64px;
+                font-size: 88px;
+                line-height: 108px;
+                width: 208px;
+                height: 83px;
                 white-space: nowrap;
             }
     
@@ -40,25 +43,23 @@ section {
                 justify-content: center;
         
                 .name {
-                    font-size: 90px;
+                    font-size: 128px;
+                    line-height: 153.6px;
                     font-weight: 700;
                     white-space: nowrap;
-                    padding: 0;
-                    margin-bottom: -36px;
-                    margin-top: -12px;
                 }
-        
+                
                 .profession {
-                    font-size: 58px;
+                    font-size: 64px;
+                    line-height: 76.8px;
                     text-transform: uppercase;
                     color: #9747FF;
-                    padding: 0;
                 }
             }
         }
 
         .talk-btn {
-            margin-top: 44px;
+            margin-top: 72px;
             width: 165px;
             height: 58px;
             border-radius: 10px;
@@ -89,6 +90,7 @@ section {
     width: 100%;
     align-items: center;
     height: 160px;
+    margin-top: 120px;
     
     .social-dividing {
         display: flex;
