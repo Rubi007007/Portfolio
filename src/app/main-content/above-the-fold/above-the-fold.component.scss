@@ -1,99 +1,102 @@
 section {
     display: flex;
+    align-items: center;
     flex-direction: column;
     padding: 0 96px 0 96px;
-
-    .introducing-area {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #fff;
-        height: 100vh;
+    margin-bottom: 120px;
     
-        .profile {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            position: relative;
-            .background-shadows {
-                width: 691px;
-                height: 671px;
-                position: absolute;
-            }
-        
-            .profile-pic {
-                width: 400px;
-                left: 140px;
-                z-index: 1;
-                margin-left: 144px;
-            }
+}
+
+.introducing-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    height: 100vh;
+
+    .profile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        .background-shadows {
+            width: 691px;
+            height: 671px;
+            position: absolute;
         }
     
-        .slogan-area {
+        .profile-pic {
+            width: 400px;
+            left: 140px;
+            z-index: 1;
+            margin-left: 144px;
+        }
+    }
+
+    .slogan-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        
+        .slogan {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            z-index: 1;
-            
-            .slogan {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 172px;
-                margin-right: 100px;
-        
-                .i-am {
-                    transform: rotate(-90deg);
-                    font-size: 64px;
-                    white-space: nowrap;
-                }
-        
-                .name-profession {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-            
-                    .name {
-                        font-size: 90px;
-                        font-weight: 700;
-                        white-space: nowrap;
-                        padding: 0;
-                        margin-bottom: -36px;
-                        margin-top: -12px;
-                    }
-            
-                    .profession {
-                        font-size: 58px;
-                        text-transform: uppercase;
-                        color: #9747FF;
-                        padding: 0;
-                    }
-                }
+            height: 172px;
+            margin-right: 100px;
+    
+            .i-am {
+                transform: rotate(-90deg);
+                font-size: 64px;
+                white-space: nowrap;
             }
     
-            .talk-btn {
-                margin-top: 44px;
-                width: 165px;
-                height: 58px;
-                border-radius: 10px;
-                padding: 15px 30px;
-                font-size: 23px;
-                background-color: #70E61C;
-                color: #fff;
-                white-space: nowrap;
-                text-align: center;
+            .name-profession {
                 display: flex;
-                align-items: center;
-                cursor: pointer;
-                border-style: none;
-                transition: transform 100ms ease-out, background-color 100ms ease-out;
-                transform-origin: top center;
-    
-                &:hover {
-                    transform: scale(1.25);
-                    background-color: #9747FF;
+                flex-direction: column;
+                justify-content: center;
+        
+                .name {
+                    font-size: 90px;
+                    font-weight: 700;
+                    white-space: nowrap;
+                    padding: 0;
+                    margin-bottom: -36px;
+                    margin-top: -12px;
                 }
+        
+                .profession {
+                    font-size: 58px;
+                    text-transform: uppercase;
+                    color: #9747FF;
+                    padding: 0;
+                }
+            }
+        }
+
+        .talk-btn {
+            margin-top: 44px;
+            width: 165px;
+            height: 58px;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-size: 23px;
+            background-color: #70E61C;
+            color: #fff;
+            white-space: nowrap;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border-style: none;
+            transition: transform 100ms ease-out, background-color 100ms ease-out;
+            transform-origin: top center;
+
+            &:hover {
+                transform: scale(1.25);
+                background-color: #9747FF;
             }
         }
     }
@@ -102,7 +105,9 @@ section {
 .bottom-section {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     align-items: center;
+    height: 160px;
     
     .social-dividing {
         display: flex;
@@ -133,15 +138,12 @@ section {
 
     .scroll-down {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-        width: 28px;
-        height: 160px;
+        transform: rotate(90deg);
 
         span {
             color: #fff;
-            transform: rotate(90deg);
+            margin-right: 4px;
             font-size: 23px;
             white-space: nowrap;
         }
@@ -149,6 +151,8 @@ section {
         .arrow-down {
             width: 24px;
             height: 24px;
+            transform: rotate(-90deg);
+            margin-top: 2px;
         }
     }
 }
