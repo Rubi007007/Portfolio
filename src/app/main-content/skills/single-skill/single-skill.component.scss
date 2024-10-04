@@ -1,0 +1,12 @@
+.skill-separately {
+    display: flex;
+    flex-direction: column;
+
+    .skill-icon {
+        width: 60px;
+    }
+
+    .skill-name {
+        color: #fff;
+    }
+}
