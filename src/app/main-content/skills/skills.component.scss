@@ -3,5 +3,67 @@ section {
     position: relative;
     z-index: 10;
     margin-top: 125px;
-
+    display: flex;
+    justify-content: center;
+    
+    .skill-section {
+        display: flex;
+        justify-content: flex-start;
+        gap: 80px;
+        max-width: 665px;
+        max-height: 665px;
+        flex-wrap: wrap;
+    }
+    
 }
+
+.single-skill {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 85px;
+}
+
+.journey {
+    .headline {
+        color: #fff;
+        font-size: 90px;
+        line-height: 108px;
+        font-weight: 700;
+
+        .dividing-line {
+
+        }
+    }
+
+    .journey-text {
+        .journey-subtext {
+
+        }
+    }
+
+    .btn {
+        margin-top: 72px;
+        width: 200px;
+        height: 58px;
+        border-radius: 10px;
+        padding: 15px 30px;
+        font-size: 23px;
+        background-color: #70E61C;
+        color: #fff;
+        white-space: nowrap;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border-style: none;
+        transition: transform 100ms ease-out, background-color 100ms ease-out;
+        transform-origin: top left;
+    
+        &:hover {
+            transform: scale(1.16);
+            background-color: #9747FF;
+        }
+    }
+}
+
