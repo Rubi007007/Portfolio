@@ -1,8 +1,16 @@
 <section id="skills">
     <div class="skill-section">
+        <!-- @for (singleSkill of skillsData.skills; track singleSkill.name; let index = $index) {
+            <app-single-skill class="single-skill skill-{{index + 1}}" [skill]="singleSkill"></app-single-skill>
+        } -->
+
         @for (singleSkill of skillsData.skills; track singleSkill.name; let index = $index) {
-            <app-single-skill class="single-skill" [skill]="singleSkill"></app-single-skill>
+            @if (index < skillsData.skills.length - 1) {
+                <app-single-skill class="single-skill skill-{{index + 1}}" [skill]="singleSkill"></app-single-skill>
+            }
         }
+        <app-single-skill class="single-skill skill-11" [skill]="skillsData.skills[skillsData.skills.length - 1]"></app-single-skill>
+
     </div>
     <div class="journey">
         <div class="headline">

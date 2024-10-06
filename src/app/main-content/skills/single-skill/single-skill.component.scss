@@ -2,11 +2,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    position: relative;
 
     .skill-icon {
         max-width: 60px;
-        max-height: 60px;
+        max-height: 60px;       
+    }
+
+    .skill-1, .skill-2, .skill-3, .skill-4, .skill-5,
+    .skill-6, .skill-7, .skill-8, .skill-9, .skill-10 {
+        filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.25));
+        transition: transform 0.4s ease-in-out;
+        
+        &.skill-1, &.skill-2, &.skill-3, &.skill-4, &.skill-5,
+        &.skill-6, &.skill-7, &.skill-8, &.skill-9, &.skill-10 {
+            &:hover {
+                animation: jump 0.5s ease-in-out forwards;
+            }
+        }
     }
 
     .skill-name {
@@ -16,5 +29,59 @@
         text-align: center;
         line-height: 19.2px;
         margin-top: 10px;
+    }
+
+    &.skill-separately-11 {
+        width: 88px;
+        margin-top: -20px;
+        
+        .skill-11 {
+            background-image: url('./../../../../assets/img/skills/learning-icon.png');
+            width: 60px;
+            height: 60px;
+            transition: 0.3s;
+        }
+
+        &:hover .skill-11 {
+            background-image: url('./../../../../assets/img/skills/learning-icon-white.png');
+        }
+        
+        .special-interest {
+            opacity: 0;
+            width: 188px;
+            height: 129px;
+            position: absolute;
+            bottom: 94px;
+            left: 0;
+            background-image: url('./../../../../assets/img/skills/learning-icon-react.png');
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        
+        &:hover .special-interest {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        &:not(:hover) .special-interest {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    
+}
+
+
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-20px);
+    }
+    
+    100% {
+        transform: translateY(0);
     }
 }

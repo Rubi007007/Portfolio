@@ -3,8 +3,10 @@ section {
     position: relative;
     z-index: 10;
     margin-top: 125px;
+    margin-bottom: 160px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     
     .skill-section {
         display: flex;
@@ -13,32 +15,79 @@ section {
         max-width: 665px;
         max-height: 665px;
         flex-wrap: wrap;
+        padding: 0 0 0 100px;
     }
     
 }
 
-.single-skill {
+.single-skill{
     display: flex;
     justify-content: center;
     flex-direction: row;
     width: 85px;
 }
 
+.single-skill:nth-last-child(1) {
+    flex-basis: 100%;
+    justify-content: flex-start;
+}
+
 .journey {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    
+    
     .headline {
-        color: #fff;
-        font-size: 90px;
-        line-height: 108px;
-        font-weight: 700;
+        h2 {
+            color: #fff;
+            font-size: 90px;
+            line-height: 108px;
+            font-weight: 700;
+        }
+        
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
 
         .dividing-line {
-
+            background-color: #1CDAE6;
+            height: 4px;
+            width: 287px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            margin-left: 32px;
         }
     }
 
     .journey-text {
-        .journey-subtext {
+        color: #fff;
+        margin-top: 40px;
+        margin-right: 90px;
+        
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+        }
 
+        .journey-subtext {
+            margin-top: 40px;
+            
+            h3 {
+                font-size: 32px;
+                line-height: 38.4px;
+                font-weight: 700;
+
+                span {
+                    color: #9747FF;
+                }
+            }
+
+            p {
+                margin-top: 16px;
+            }
         }
     }
 
@@ -66,4 +115,3 @@ section {
         }
     }
 }
-

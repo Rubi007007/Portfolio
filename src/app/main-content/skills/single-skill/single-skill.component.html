@@ -1,4 +1,10 @@
-<div class="skill-separately">
-    <img class="skill-icon" src="assets/img/skills/{{skill.img}}" alt="{{skill.name}}-icon">
-    <span class="skill-name">{{skill.name}}</span>
+<div class="skill-separately skill-separately-{{skill.number}}">
+    <!-- <img class="skill-icon skill-{{skill.number}}" src="assets/img/skills/{{skill.img}}" alt="{{skill.name}}-icon"> -->
+
+    <img *ngIf="skill.number !== 11" class="skill-icon skill-{{skill.number}}" src="assets/img/skills/{{skill.img}}" alt="{{skill.name}}-icon">
+
+    <div class="special-interest"></div>
+    <div *ngIf="skill.number === 11" class="skill-icon skill-{{skill.number}}"></div>
+
+    <span class="skill-name skill-name-{{skill.number}}">{{skill.name}}</span>
 </div>
