@@ -1,15 +1,18 @@
 <section id="portfolio">
     <div class="header">
         <div class="headline-text">
-            <div class="dividing-line"></div>
+            <div class="dividing-line-left"></div>
             <h2>Portfolio</h2>
+            <div class="dividing-line-right"></div>
         </div>
-            <p>
-                Explore a selection of my work here -
-                Interact with projects to see my skills in action.
-            </p>
+        <p>
+            Explore a selection of my work here -
+            Interact with projects to see my skills in action.
+        </p>
     </div>
     <div class="projects">
-
+        @for (singleProject of projectsData.projects; track singleProject.name; let index = $index) {
+            <app-single-project class="single-project project-{{index + 1}}" [project]="singleProject"></app-single-project>
+        }
     </div>
 </section>

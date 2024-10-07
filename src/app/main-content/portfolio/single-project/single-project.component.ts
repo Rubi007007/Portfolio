@@ -12,7 +12,9 @@ import { FormsModule } from '@angular/forms';
 export class SingleProjectComponent {
   @Input()project = {
     name: "El Pollo Loco",
-    img: "el-pollo-loco-icon.png",
+    img: "el-pollo-loco-project.png",
+    description: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+    programmingLanguages: ["JavaScript", "HTML", "CSS"]
   }
 
   inputData = "";

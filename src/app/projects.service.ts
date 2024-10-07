@@ -11,11 +11,15 @@ export class ProjectsdataService {
     projects = [
         {
             name: "El Pollo Loco",
-            img: "el-pollo-loco-icon.png",
+            img: "el-pollo-loco-project.png",
+            description: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+            programmingLanguages: ["JavaScript", "HTML", "CSS"]
         },
         {
             name: "Join",
-            img: "join-icon.png",
+            img: "join-project.png",
+            description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+            programmingLanguages: ["JavaScript", "HTML", "CSS"]
         }
     ]
 }

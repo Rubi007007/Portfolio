@@ -1,1 +1,16 @@
-<p>single-project works!</p>
+<div class="project-separately">
+    <div class="project-img">
+        <img src="/assets/img/projects/{{project.img}}" alt="">
+    </div>
+    <div class="project-description">
+        <div class="project-text">
+            <h2>{{project.name}}</h2>
+            <span class="language">{{project.programmingLanguages.join(" | ")}}</span>
+            <span class="description">{{project.description}}</span>
+        </div>
+        <div class="project-btns">
+            <button class="btn btn-test">Live test</button>
+            <button class="btn btn-git">Github</button>
+        </div>
+    </div>
+</div>
