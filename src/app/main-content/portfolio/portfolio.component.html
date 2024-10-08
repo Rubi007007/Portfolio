@@ -11,8 +11,19 @@
         </p>
     </div>
     <div class="projects">
-        @for (singleProject of projectsData.projects; track singleProject.name; let index = $index) {
+        <!-- @for (singleProject of projectsData.projects; track singleProject.name; let index = $index) {
             <app-single-project class="single-project project-{{index + 1}}" [project]="singleProject"></app-single-project>
+        } -->
+        @for (singleProject of projectsData.projects; track singleProject.name; let index = $index) {
+            @if (index % 2 === 0) {
+                <app-single-project class="single-project project-{{index + 1}}" [project]="singleProject"></app-single-project>
+            }
+        }
+        
+        @for (singleProject of projectsData.projects; track singleProject.name; let index = $index) {
+            @if (index % 2 === 1) {
+                <app-single-project-mirrored class="single-project project-{{index + 1}}" [project]="singleProject"></app-single-project-mirrored>
+            }
         }
     </div>
 </section>
