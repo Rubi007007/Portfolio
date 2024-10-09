@@ -1,13 +1,13 @@
 <section id="contact">
     <img class="shadow" src="/assets/img/background/purple-shadow-contact.png" alt="purple-shadow">
-    <div class="header">
+    <div class="header" data-aos="fade-right" data-aos-delay="800">
         <div class="headline">
             <div class="dividing-line-left"></div>
             <h2>Contact</h2>
         </div>
     </div>
     <div class="content">
-        <div class="got-a-problem">
+        <div class="got-a-problem" data-aos="fade-right" data-aos-delay="800">
             <div class="subheadline">
                 <div class="dividing-line-subhead"></div>
                 <h3>Got a problem to solve?</h3>
@@ -23,7 +23,7 @@
                 </p>
             </div>
         </div>
-        <div class="contact-me">
+        <div class="contact-me" data-aos="fade-left" data-aos-delay="800">
             <form novalidate (ngSubmit)="onSubmit($event)">
                 <div>
                     <input (input)="checkValidName()" (focusout)="checkValueName()" #name [ngClass]="{'invalid-input': isNameInvalid, 'valid-input': isNameValid}" id="name" name="name" type="text" autocomplete="off" required placeholder="Your name ...">
