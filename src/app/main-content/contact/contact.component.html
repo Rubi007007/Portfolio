@@ -1,4 +1,5 @@
 <section id="contact">
+    <img class="shadow" src="/assets/img/background/purple-shadow-contact.png" alt="purple-shadow">
     <div class="header">
         <div class="headline">
             <div class="dividing-line-left"></div>
@@ -25,16 +26,16 @@
         <div class="contact-me">
             <form novalidate>
                 <div>
-                    <input (focusout)="checkValue()" #name [ngClass]="{'invalid-input': isNameInvalid}" id="name" name="name" type="text" autocomplete="off" required placeholder="Your name ...">
+                    <input (input)="checkValidName()" (focusout)="checkValueName()" #name [ngClass]="{'invalid-input': isNameInvalid, 'valid-input': isNameValid}" id="name" name="name" type="text" autocomplete="off" required placeholder="Your name ...">
                     <span class="span-input" [ngClass]="{'invalid': isNameInvalid}">Your name is required</span>
                 </div>
                 <div>
-                    <input id="email" name="email" type="email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" autocomplete="off" required placeholder="Your email ...">
-                    <span class="span-input">Your email is required</span>
+                    <input (input)="checkValidMail()" (focusout)="checkValueMail()" #email [ngClass]="{'invalid-input': isMailInvalid, 'valid-input': isMailValid}" id="email" name="email" type="email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" autocomplete="off" required placeholder="Your email ...">
+                    <span class="span-input" [ngClass]="{'invalid': isMailInvalid}">Your email is required</span>
                 </div>
                 <div>
-                    <textarea id="message" cols="30" rows="10" name="message" type="email" required placeholder="Your message ..."></textarea>
-                    <span class="span-input">Your message is empty</span>
+                    <textarea (input)="checkValidMessage()" (focusout)="checkValueMessage()" #message [ngClass]="{'invalid-input': isMessageInvalid, 'valid-input': isMessageValid}" id="message" cols="30" rows="10" name="message" type="email" required placeholder="Your message ..."></textarea>
+                    <span class="span-input" [ngClass]="{'invalid': isMessageInvalid}">Your message is empty</span>
                 </div>
                 <div class="terms">
                     <div class="checkbox">
