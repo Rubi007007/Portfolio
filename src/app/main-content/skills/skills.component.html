@@ -1,9 +1,5 @@
 <section id="skills">
-    <div class="skill-section">
-        <!-- @for (singleSkill of skillsData.skills; track singleSkill.name; let index = $index) {
-            <app-single-skill class="single-skill skill-{{index + 1}}" [skill]="singleSkill"></app-single-skill>
-        } -->
-
+    <div class="skill-section" data-aos="fade-right" data-aos-delay="300">
         @for (singleSkill of skillsData.skills; track singleSkill.name; let index = $index) {
             @if (index < skillsData.skills.length - 1) {
                 <app-single-skill class="single-skill skill-{{index + 1}}" [skill]="singleSkill"></app-single-skill>
@@ -13,11 +9,11 @@
 
     </div>
     <div class="journey">
-        <div class="headline">
+        <div class="headline" data-aos="fade-left" data-aos-delay="300">
             <h2>Skills</h2>
             <div class="dividing-line"></div>
         </div>
-        <div class="journey-text">
+        <div class="journey-text" data-aos="fade-left" data-aos-delay="300">
             <p>
                 My journey has involved working on diverse projects,
                 employing a range of frontend technologies and concepts.
