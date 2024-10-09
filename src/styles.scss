@@ -32,6 +32,10 @@ body {
   color: #70e61c;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /* poppins-100 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */

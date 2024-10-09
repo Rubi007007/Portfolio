@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="contact-me">
-            <form novalidate (ngSubmit)="onSubmit()">
+            <form novalidate (ngSubmit)="onSubmit($event)">
                 <div>
                     <input (input)="checkValidName()" (focusout)="checkValueName()" #name [ngClass]="{'invalid-input': isNameInvalid, 'valid-input': isNameValid}" id="name" name="name" type="text" autocomplete="off" required placeholder="Your name ...">
                     <span class="span-input" [ngClass]="{'invalid': isNameInvalid}">Your name is required</span>
@@ -44,10 +44,14 @@
                     </div>
                     <div class="btn">
                         <input type="submit" value="Send message" class="btn-submit" [disabled]="!isFormValid">
-                        <!-- ERST AKTIVIEREN WENN ENDE <a href="#atf" class="go-up-btn"></a> -->
+                        <div class="go-up-btn" (click)="goToTop()"></div>
                     </div>
                 </div>
             </form>
         </div>
+    </div>
+    <div class="overlay" [ngClass]="{'visible': isVisible}" *ngIf="isMailSent"></div>
+    <div class="confirmation-message" [ngClass]="{'visible': isVisible}" *ngIf="isMailSent">
+        <p>Your message has been sent successfully!</p>
     </div>
 </section>
