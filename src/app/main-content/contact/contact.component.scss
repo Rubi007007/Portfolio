@@ -211,6 +211,14 @@ section {
                             }
                         }
 
+                        .checked {
+                            background-image: url(/assets/img/contact-me/checkbox_checked.png) !important;
+
+                            &:hover {
+                                background-image: url(/assets/img/contact-me/checkbox_checked_hover.png) !important;
+                            }
+                        }
+
                         span {
                             color: #fff;
                             font-size: 14px;

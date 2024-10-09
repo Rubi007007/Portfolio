@@ -13,14 +13,20 @@ export class ContactComponent {
   @ViewChild('name') nameInput!: ElementRef;
   @ViewChild('email') mailInput!: ElementRef;
   @ViewChild('message') messageInput!: ElementRef;
+  @ViewChild('checkbox') checkboxInput!: ElementRef;
+
   isNameInvalid: boolean = false;
-  isNameValid: boolean | undefined;
+  isNameValid: boolean = false;
   
   isMailInvalid: boolean = false;
   isMailValid: boolean = false;
 
   isMessageInvalid: boolean = false;
   isMessageValid: boolean = false;
+
+  isCheckboxChecked: boolean = false;
+
+  isFormValid: boolean = false;
 
 
   checkValueName() {
@@ -31,6 +37,8 @@ export class ContactComponent {
     } else {
       this.isNameInvalid = false;
     }
+
+    this.checkFormValidity();
   }
 
   checkValidName() {
@@ -43,6 +51,8 @@ export class ContactComponent {
       this.isNameValid = true;
       this.isNameInvalid = false;
     }
+
+    this.checkFormValidity();
   }
 
   checkValueMail() {
@@ -54,6 +64,8 @@ export class ContactComponent {
     } else {
       this.isMailInvalid = false;
     }
+
+    this.checkFormValidity();
   }
 
   checkValidMail() {
@@ -67,6 +79,8 @@ export class ContactComponent {
       this.isMailInvalid = false;
       this.isMailValid = true;
     }
+
+    this.checkFormValidity();
   }
 
   checkValueMessage() {
@@ -77,6 +91,8 @@ export class ContactComponent {
     } else {
       this.isMessageInvalid = false;
     }
+    
+    this.checkFormValidity();
   }
 
   checkValidMessage() {
@@ -89,5 +105,16 @@ export class ContactComponent {
       this.isMessageInvalid = false;
       this.isMessageValid = true;
     }
+
+    this.checkFormValidity();
+  }
+
+  toggleCheckbox() {
+    this.isCheckboxChecked = !this.isCheckboxChecked;
+    this.checkFormValidity();
+  }
+
+  checkFormValidity() {
+    this.isFormValid = this.isNameValid && this.isMailValid && this.isMessageValid && this.isCheckboxChecked;
   }
 }

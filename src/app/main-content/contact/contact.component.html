@@ -31,7 +31,7 @@
                 </div>
                 <div>
                     <input (input)="checkValidMail()" (focusout)="checkValueMail()" #email [ngClass]="{'invalid-input': isMailInvalid, 'valid-input': isMailValid}" id="email" name="email" type="email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" autocomplete="off" required placeholder="Your email ...">
-                    <span class="span-input" [ngClass]="{'invalid': isMailInvalid}">Your email is required</span>
+                    <span class="span-input" [ngClass]="{'invalid': isMailInvalid}">Your email in the correct format is required</span>
                 </div>
                 <div>
                     <textarea (input)="checkValidMessage()" (focusout)="checkValueMessage()" #message [ngClass]="{'invalid-input': isMessageInvalid, 'valid-input': isMessageValid}" id="message" cols="30" rows="10" name="message" type="email" required placeholder="Your message ..."></textarea>
@@ -39,11 +39,11 @@
                 </div>
                 <div class="terms">
                     <div class="checkbox">
-                        <input type="checkbox" name="checkbox" required>
+                        <input (click)="toggleCheckbox()" [ngClass]="{'checked': isCheckboxChecked}" #checkbox type="checkbox" name="checkbox" required>
                         <span class="policy">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</span>
                     </div>
                     <div class="btn">
-                        <input type="submit" value="Send message" class="btn-submit" disabled>
+                        <input type="submit" value="Send message" class="btn-submit" [disabled]="!isFormValid">
                         <!-- ERST AKTIVIEREN WENN ENDE <a href="#atf" class="go-up-btn"></a> -->
                     </div>
                 </div>
