@@ -17,17 +17,22 @@ export class ContactComponent {
 
   isNameInvalid: boolean = false;
   isNameValid: boolean = false;
-  
   isMailInvalid: boolean = false;
   isMailValid: boolean = false;
-
   isMessageInvalid: boolean = false;
   isMessageValid: boolean = false;
-
   isCheckboxChecked: boolean = false;
-
   isFormValid: boolean = false;
 
+  contactData = {
+    name: '',
+    email: '',
+    message: '',
+  }
+
+  onSubmit() {
+    console.log('test')
+  }
 
   checkValueName() {
     const nameValue = this.nameInput.nativeElement.value;
@@ -57,7 +62,7 @@ export class ContactComponent {
 
   checkValueMail() {
     const mailValue = this.mailInput.nativeElement.value;
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const emailPattern = /^[a-zA-Z0-9._\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$/;
 
     if (mailValue === '' || !emailPattern.test(mailValue)) {
       this.isMailInvalid = true;
@@ -70,7 +75,7 @@ export class ContactComponent {
 
   checkValidMail() {
     const mailValue = this.mailInput.nativeElement.value;
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const emailPattern = /^[a-zA-Z0-9._\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$/;
 
     if (mailValue === '' || !emailPattern.test(mailValue)) {
       this.isMailInvalid = true;

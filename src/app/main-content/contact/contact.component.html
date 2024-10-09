@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="contact-me">
-            <form novalidate>
+            <form novalidate (ngSubmit)="onSubmit()">
                 <div>
                     <input (input)="checkValidName()" (focusout)="checkValueName()" #name [ngClass]="{'invalid-input': isNameInvalid, 'valid-input': isNameValid}" id="name" name="name" type="text" autocomplete="off" required placeholder="Your name ...">
                     <span class="span-input" [ngClass]="{'invalid': isNameInvalid}">Your name is required</span>
