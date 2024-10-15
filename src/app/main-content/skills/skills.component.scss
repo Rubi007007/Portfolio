@@ -18,6 +18,12 @@ section {
         padding: 0 0 0 100px;
     }
     
+    .shadow {
+        position: absolute;
+        left: 0;
+        bottom: -730px;
+        // z-index: 20;
+    }
 }
 
 .single-skill{

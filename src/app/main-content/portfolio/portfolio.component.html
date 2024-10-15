@@ -1,15 +1,16 @@
 <section id="portfolio">
-    <img class="shadow" src="/assets/img/background/green-shadow.png" alt="green-shadow">
-    <div class="header" data-aos="fade-left" data-aos-delay="300">
-        <div class="headline-text">
-            <div class="dividing-line-left"></div>
-            <h2>Portfolio</h2>
-            <div class="dividing-line-right"></div>
+    <div class="head-section">
+        <div class="header" data-aos="fade-left" data-aos-delay="300"> <!---->
+            <div class="headline-text">
+                <div class="dividing-line-left"></div>
+                <h2>Portfolio</h2>
+                <div class="dividing-line-right"></div>
+            </div>
+            <p>
+                Explore a selection of my work here -
+                Interact with projects to see my skills in action.
+            </p>
         </div>
-        <p>
-            Explore a selection of my work here -
-            Interact with projects to see my skills in action.
-        </p>
     </div>
     <div class="projects">
         @for (singleProject of projectsData.projects; track singleProject.name; let index = $index) {

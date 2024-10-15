@@ -5,13 +5,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    .shadow {
-        position: absolute;
-        left: 0;
-        top: -420px;
-        z-index: 20;
-    }
+    overflow-x: hidden;
 
     .header {
         width: 70%;
