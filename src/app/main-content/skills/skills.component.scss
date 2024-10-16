@@ -42,7 +42,7 @@ section {
     width: 560px;
     display: flex;
     flex-direction: column;
-    
+    overflow-x: hidden;
     
     .headline {
         h2 {
