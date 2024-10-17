@@ -1,11 +1,11 @@
 section {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     max-width: 1920px;
     height: calc(100vh - 109px);
     position: relative;
+    overflow-x: hidden;
 }
 
 .background-splash-atf {
@@ -15,6 +15,24 @@ section {
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    .purple-splash {
+        @media (max-width: 850px) {
+            position: absolute;
+            top: 40px;
+            left: -40px;
+            width: 273px;
+        }
+    }
+
+    .blue-splash {
+        @media (max-width: 850px) {
+            position: absolute;
+            right: -90px;
+            top: 100px;
+            width: 250px;
+        }
+    }
 }
 
 .introducing-area {
@@ -22,20 +40,50 @@ section {
     justify-content: space-between;
     align-items: center;
     color: #fff;
+    margin-top: 200px;
 
     .slogan-area {
         position: relative;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
+        left: -38px;
         z-index: 1;
+
+        @media (max-width: 1350px) {
+            left: -28px;
+        }
+
+        @media (max-width: 1050px) {
+            left: -25px;
+        }
+
+        @media (max-width: 850px) {
+            left: -17px;
+        }
+
+        @media (max-width: 600px) {
+            left: -14px;
+        }
+
+        @media (max-width: 430px) {
+            left: -10px;
+        }
         
         .slogan {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 172px;
+
+            @media (max-width: 850px) {
+                transform: scale(0.7);
+            }
+
+            @media (max-width: 600px) {
+                transform: scale(0.5);
+            }
+
+            @media (max-width: 430px) {
+                transform: scale(0.35);
+            }
     
             .i-am {
                 transform: rotate(-90deg);
@@ -46,9 +94,18 @@ section {
                 white-space: nowrap;
 
                 @media (max-width: 1350px) {
-                    
+                    font-size: 70px;
+                    line-height: 85px;
+                    width: 160px;
+                    height: 70px;
                 }
 
+                @media (max-width: 1050px) {
+                    font-size: 60px;
+                    line-height: 75px;
+                    width: 140px;
+                    height: 60px;
+                }
             }
     
             .name-profession {
@@ -63,7 +120,13 @@ section {
                     white-space: nowrap;
 
                     @media (max-width: 1350px) {
-                        
+                        font-size: 100px;
+                        line-height: 120px;
+                    }
+
+                    @media (max-width: 1050px) {
+                        font-size: 80px;
+                        line-height: 100px;
                     }
                 }
                 
@@ -72,9 +135,16 @@ section {
                     line-height: 76.8px;
                     text-transform: uppercase;
                     color: #9747FF;
+                    white-space: nowrap;
 
                     @media (max-width: 1350px) {
-                        
+                        // font-size: 50px;
+                        // line-height: 60px;
+                    }
+
+                    @media (max-width: 1050px) {
+                        // font-size: 40px;
+                        // line-height: 50px;
                     }
                 }
             }
@@ -84,9 +154,8 @@ section {
             position: absolute;
             left: 50%;
             right: 50%;
-            top: 250px;
-            transform: translate(-50%, -50%);
-            // margin-top: 72px;
+            top: 268px;
+            transform: translate(-25%, -50%);
             width: 165px;
             height: 58px;
             border-radius: 10px;
@@ -104,8 +173,51 @@ section {
             transform-origin: top left;
 
             &:hover {
-                transform: scale(1.16), translate(-50%, -50%); // hier weitermachen, sodass der Button beim hovern vergrößert wird!
+                transform: scale(1.16) translate(-25%, -50%);
                 background-color: #9747FF;
+            }
+
+            @media (max-width: 1350px) {
+                transform: translate(-32%, -50%);
+                
+                &:hover {
+                    transform: scale(1.16) translate(-32%, -50%);
+                }
+            }
+    
+            @media (max-width: 1050px) {
+                transform: translate(-35%, -50%);
+
+                &:hover {
+                    transform: scale(1.16) translate(-35%, -50%);
+                }
+            }
+    
+            @media (max-width: 850px) {
+                transform: translate(-39%, -50%);
+
+                &:hover {
+                    transform: scale(1.16) translate(-39%, -50%);
+                }
+            }
+    
+            @media (max-width: 600px) {
+                width: 133px;
+                height: 49px;
+                font-size: 16px;
+                transform: translate(-40%, -50%);
+
+                &:hover {
+                    transform: scale(1.08) translate(-40%, -50%);
+                }
+            }
+
+            @media (max-width: 430px) {
+                transform: translate(-42%, -50%);
+
+                &:hover {
+                    transform: scale(1.08) translate(-42%, -50%);
+                }
             }
         }
     }
@@ -121,6 +233,11 @@ section {
         justify-content: flex-start;
         align-items: center;
         width: 566px;
+
+        @media (max-width: 600px) {
+            justify-content: center;
+            width: 100%;
+        }
     
         .dividing-line {
             height: 4px;
@@ -129,20 +246,39 @@ section {
             border-radius: 0 4px 4px 0;
             margin-right: 32px;
             margin-bottom: 7px;
+
+            @media (max-width: 600px) {
+                width: 10%;
+                max-width: 64px;
+                position: absolute;
+                left: 0;
+            }
         }
     
         .social-media {
             display: flex;
+            justify-content: center;
             color: #fff;
             font-size: 23px;
+
             .social-media-buttons {
                 > a {
                     margin-right: 32px;
+
+                    @media (max-width: 600px) {
+                        margin-right: 0;
+                    }
+                }
+
+                @media (max-width: 600px) {
+                    display: flex;
+                    gap: 42px;
                 }
             }
 
             .mail {
                 transition: 0.3s;
+                
                 &:hover {
                     cursor: pointer;
                     color: #70E61C;
@@ -156,5 +292,15 @@ section {
         bottom: 49px;
         right: 100px;
         cursor: pointer;
+
+        @media (max-width: 850px) {
+            display: none;
+        }
+    }
+}
+
+.mail-me {
+    @media (max-width: 600px) {
+        display: none;
     }
 }
