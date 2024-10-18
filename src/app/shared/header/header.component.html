@@ -7,7 +7,15 @@
         <span>Skills</span>
         <span>Portfolio</span>
     </div>
-    <div class="mobile-menu">
+    <div class="mobile-menu" (click)="toggleOverlay()">
         <img src="assets/img/navbar/burger-menu.svg" alt="">
     </div>
 </nav>
+
+<div class="mobile-overlay" *ngIf="isOverlayVisible || isClosing" [ngClass]="{ 'slide-out-left': isClosing }" data-aos="fade-left" data-aos-duration="300">
+    <div class="overlay-menu">
+      <a href="#about-me-section" (click)="closeOverlay()">About me</a>
+      <a href="#about" (click)="closeOverlay()">Skills</a>
+      <a href="#skills" (click)="closeOverlay()">Portfolio</a>
+    </div>
+</div>
