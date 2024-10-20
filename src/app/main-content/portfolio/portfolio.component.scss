@@ -65,5 +65,9 @@ section {
     .projects {
         margin-bottom: 124px;
         margin-top: 180px;
+
+        @media (max-width: 1300px) {
+            margin-top: 430px;
+        }
     }
 }

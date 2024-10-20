@@ -9,9 +9,18 @@
     z-index: 20;
     margin-top: 80px;
 
+    @media (max-width: 1300px) {
+        flex-direction: column;
+        overflow: visible;
+    }
+
     .project-img {
         width: 100%;
         max-width: 620px;
+
+        @media (max-width: 1300px) {
+            margin-bottom: -30px;
+        }
     }
 
     .project-description {
@@ -22,6 +31,10 @@
         gap: 35px;
         width: 100%;
         max-width: 512px;
+
+        @media (max-width: 1300px) {
+            text-align: center;
+        }
 
         .project-text {
             display: flex;
@@ -52,6 +65,10 @@
             gap: 86px;
             width: 100%;
             text-wrap: nowrap;
+
+            @media (max-width: 1300px) {
+                justify-content: center;
+            }
 
             .btn {
                 padding: 15px 30px;

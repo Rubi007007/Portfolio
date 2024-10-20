@@ -9,9 +9,27 @@
     z-index: 20;
     margin-top: 80px;
 
+    @media (max-width: 1300px) {
+        flex-direction: column;
+        overflow: visible;
+        margin-top: 330px;
+
+        .project-img {
+            order: 0;
+        }
+
+        .project-description {
+            order: 1;
+        }
+    }
+
     .project-img {
         width: 100%;
         max-width: 620px;
+
+        @media (max-width: 1300px) {
+            margin-bottom: -30px;
+        }
     }
 
     .project-description {
@@ -28,6 +46,10 @@
             flex-direction: column;
             align-items: flex-end;
             gap: 15px;
+
+            @media (max-width: 1300px) {
+                align-items: center;
+            }
 
             h2 {
                 font-size: 32px;
@@ -46,6 +68,10 @@
                 font-size: 16px;
                 font-weight: 400;
                 text-align: end;
+
+                @media (max-width: 1300px) {
+                    text-align: center;
+                }
             }
         }
 
@@ -55,6 +81,10 @@
             gap: 86px;
             width: 100%;
             text-wrap: nowrap;
+
+            @media (max-width: 1300px) {
+                justify-content: center;
+            }
 
             .btn {
                 padding: 15px 30px;
