@@ -1,6 +1,6 @@
 <section id="skills">
     <img class="shadow" src="/assets/img/background/green-shadow.png" alt="green-shadow">
-    <div class="skill-section" data-aos="fade-right" data-aos-delay="300">
+    <div class="skill-section skill-section-desktop" data-aos="fade-right" data-aos-delay="300">
         @for (singleSkill of skillsData.skills; track singleSkill.name; let index = $index) {
             @if (index < skillsData.skills.length - 1) {
                 <app-single-skill class="single-skill skill-{{index + 1}}" [skill]="singleSkill"></app-single-skill>
@@ -9,7 +9,7 @@
         <app-single-skill class="single-skill skill-11" [skill]="skillsData.skills[skillsData.skills.length - 1]"></app-single-skill>
 
     </div>
-    <div class="journey">
+    <div class="journey journey-desktop">
         <div class="headline" data-aos="fade-left" data-aos-delay="300">
             <h2>Skills</h2>
             <div class="dividing-line"></div>
@@ -30,6 +30,37 @@
                 </p>
             </div>
         </div>
-        <button class="btn">Get in touch</button>
+        <button class="btn btn-desktop">Get in touch</button>
     </div>
+
+    <!-- MOBILE -->
+    <div class="journey journey-mobile">
+        <div class="headline" data-aos="fade-left" data-aos-delay="300">
+            <h2>Skills</h2>
+            <div class="dividing-line"></div>
+        </div>
+        <div class="journey-text-mobile" data-aos="fade-left" data-aos-delay="300">
+            <p>
+                I have gained experience in building projects with
+                various front end technologies and concepts.
+            </p>
+        </div>
+    </div>
+    <div class="skill-section skill-section-mobile" data-aos="fade-right" data-aos-delay="300">
+        @for (singleSkill of skillsData.skills; track singleSkill.name; let index = $index) {
+            @if (index < skillsData.skills.length - 1) {
+                <app-single-skill class="single-skill skill-{{index + 1}}" [skill]="singleSkill"></app-single-skill>
+            }
+        }
+        <app-single-skill class="single-skill skill-11" [skill]="skillsData.skills[skillsData.skills.length - 1]"></app-single-skill>
+
+    </div>
+    <div class="journey-subtext-mobile" data-aos="fade-left" data-aos-delay="300">
+        <h3>Looking for <span>another skill</span>?</h3>
+        <p>
+            Feel free to contact me. I look forward to expanding
+            on my previous knowledge.
+        </p>
+    </div>
+    <button class="btn btn-mobile" data-aos="fade-left" data-aos-delay="300">Get in touch</button>
 </section>
