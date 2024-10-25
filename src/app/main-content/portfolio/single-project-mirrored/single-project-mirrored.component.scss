@@ -65,12 +65,7 @@
         .project-text {
             display: flex;
             flex-direction: column;
-            // align-items: flex-end; // nur nach Queries
             gap: 15px;
-
-            @media (max-width: 1300px) {
-                // align-items: center; // nur nach Queries
-            }
 
             h2 {
                 font-size: 32px;
