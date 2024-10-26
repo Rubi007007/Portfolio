@@ -298,6 +298,11 @@ section {
                             a {
                                 text-decoration: none;
                                 color: #9747FF;
+                                transition: 0.3s;
+
+                                &:hover {
+                                    color: #70E61C;
+                                }
                             }
                         }
                     }
