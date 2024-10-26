@@ -134,3 +134,12 @@ nav {
       opacity: 0;
     }
 }
+
+.menu a.active {
+    color: #70E61C;
+}
+
+.menu a.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}

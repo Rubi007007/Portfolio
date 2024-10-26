@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Renderer2 } from '@angular/core';
+import { Component, Renderer2, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,9 +10,10 @@ import { Component, Renderer2 } from '@angular/core';
 })
 export class HeaderComponent {
   isOverlayVisible = false;
-  isClosing = false; // Variable für den Schließzustand
+  isClosing = false;
 
   constructor(private renderer: Renderer2) {}
+  @ViewChild('menu', { static: true }) menu!: ElementRef;
 
   toggleOverlay() {
     this.isOverlayVisible = !this.isOverlayVisible;
@@ -24,13 +25,21 @@ export class HeaderComponent {
   }
 
   closeOverlay() {
-    this.isClosing = true; // Schließzustand aktivieren
+    this.isClosing = true;
 
-    // Entferne das Overlay nach der Animationsdauer (500ms) und setze den Zustand zurück
     setTimeout(() => {
       this.isOverlayVisible = false;
       this.isClosing = false;
       this.renderer.removeStyle(document.body, 'overflow');
-    }, 500); // Zeit muss der Animationsdauer in der CSS entsprechen
+    }, 500);
+  }
+
+  setActiveLink(event: Event) {
+    const target = event.target as HTMLElement;
+    if (target.tagName === 'A') {
+      const links = this.menu.nativeElement.querySelectorAll('a');
+      links.forEach((link: HTMLElement) => this.renderer.removeClass(link, 'active'));
+      this.renderer.addClass(target, 'active');
+    }
   }
 }

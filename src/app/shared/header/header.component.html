@@ -2,7 +2,7 @@
     <div class="logo">
         <span>R<span class="purple">u</span>be<span class="green">n</span></span>
     </div>
-    <div class="menu">
+    <div class="menu" #menu (click)="setActiveLink($event)">
         <a href="#about-me-section">About me</a>
         <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
