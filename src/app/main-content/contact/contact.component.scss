@@ -391,6 +391,10 @@ section {
         z-index: 102;
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
+
+        @media (max-width: 530px) {
+            width: 80%;
+        }
     }
 
     .confirmation-message.visible {
@@ -432,5 +436,4 @@ section {
     @media (max-width: 700px) {
         display: block;
     }
-
 }
