@@ -1,0 +1,14 @@
+section {
+    color: #fff;
+    padding: 40px 100px 100px 100px;
+
+    .links {
+        text-decoration: none;
+        color: #70E61C;
+        transition: 0.3s;
+        
+        &:hover {
+            color: #9747FF;
+        }
+    }
+}
