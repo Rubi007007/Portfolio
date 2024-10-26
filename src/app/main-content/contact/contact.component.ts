@@ -104,29 +104,16 @@ export class ContactComponent {
 
   checkValueMail() {
     const mailValue = this.mailInput.nativeElement.value;
-    const emailPattern = /^[a-zA-Z0-9._\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$/;
-
-    if (mailValue === '' || !emailPattern.test(mailValue)) {
-      this.isMailInvalid = true;
-    } else {
-      this.isMailInvalid = false;
-    }
-
+  
+    this.isMailInvalid = mailValue === '' || !this.checkEmailPattern(mailValue);
     this.checkFormValidity();
   }
 
   checkValidMail() {
     const mailValue = this.mailInput.nativeElement.value;
-    const emailPattern = /^[a-zA-Z0-9._\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$/;
 
-    if (mailValue === '' || !emailPattern.test(mailValue)) {
-      this.isMailInvalid = true;
-      this.isMailValid = false;
-    } else {
-      this.isMailInvalid = false;
-      this.isMailValid = true;
-    }
-
+    this.isMailValid = mailValue !== '' && this.checkEmailPattern(mailValue);
+    this.isMailInvalid = !this.isMailValid;
     this.checkFormValidity();
   }
 
@@ -167,6 +154,16 @@ export class ContactComponent {
       this.isMailValid &&
       this.isMessageValid &&
       this.isCheckboxChecked;
+  }
+
+  checkEmailPattern(mailValue: string): boolean {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    try {
+      return emailPattern.test(mailValue);
+    } catch (error) {
+      console.error('Invalid email pattern:', error);
+      return false;
+    }
   }
 
   goToTop() {
