@@ -11,4 +11,22 @@ section {
             color: #9747FF;
         }
     }
+
+    .br {
+        display: none;
+
+        @media (max-width: 350px) {
+            display: block;
+        }
+    }
+
+    @media (max-width: 700px) {
+        padding: 40px 24px 100px 24px;
+    }
+
+    @media (max-width: 350px) {
+        .subheadline {
+            font-size: 1.17em;
+        }
+    }
 }
