@@ -32,10 +32,14 @@ footer {
             font-size: 16px;
             margin-left: 2.5px;
             cursor: pointer;
+            display: flex;
+            gap: 8px;
 
             > * {
                 position: relative;
                 display: inline-block;
+                color: #fff;
+                text-decoration: none;
                 
                 &::after {
                     content: '';
@@ -92,11 +96,13 @@ footer {
 
 .legal-notice-mobile {
     display: none;
-    cursor: pointer;
+    cursor: pointer;    
     
     > * {
         position: relative;
         display: inline-block;
+        color: #fff;
+        text-decoration: none;
         
         &::after {
             content: '';
@@ -120,8 +126,8 @@ footer {
     }
 
     @media (max-width: 750px) {
-        display: block;
+        display: flex;
         font-size: 16px;
-
+        gap: 8px;
     }
 }
