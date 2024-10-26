@@ -395,3 +395,24 @@ section {
         opacity: 1;
       }
 }
+
+.mobile-up-btn {
+    display: none;
+    position: absolute;
+    bottom: -64px;
+    right: 24px;
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-image: url(/assets/img/contact-me/go-up-btn.png);
+
+    &:hover {
+        background-image: url(/assets/img/contact-me/go-up-btn-hover.png);
+    }
+    
+    @media (max-width: 700px) {
+        display: block;
+    }
+
+}

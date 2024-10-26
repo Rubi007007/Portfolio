@@ -3,9 +3,9 @@
         <span>R<span class="purple">u</span>be<span class="green">n</span></span>
     </div>
     <div class="menu">
-        <span>About me</span>
-        <span>Skills</span>
-        <span>Portfolio</span>
+        <a href="#about-me-section">About me</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
     </div>
     <div class="mobile-menu" (click)="toggleOverlay()">
         <img src="assets/img/navbar/burger-menu.svg" alt="">
@@ -15,7 +15,7 @@
 <div class="mobile-overlay" *ngIf="isOverlayVisible || isClosing" [ngClass]="{ 'slide-out-left': isClosing }" data-aos="fade-left" data-aos-duration="300">
     <div class="overlay-menu">
       <a href="#about-me-section" (click)="closeOverlay()">About me</a>
-      <a href="#about" (click)="closeOverlay()">Skills</a>
-      <a href="#skills" (click)="closeOverlay()">Portfolio</a>
+      <a href="#skills" (click)="closeOverlay()">Skills</a>
+      <a href="#portfolio" (click)="closeOverlay()">Portfolio</a>
     </div>
 </div>

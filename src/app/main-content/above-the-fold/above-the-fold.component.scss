@@ -172,6 +172,11 @@ section {
             transition: transform 100ms ease-out, background-color 100ms ease-out;
             transform-origin: top left;
 
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+
             &:hover {
                 transform: scale(1.16) translate(-25%, -50%);
                 background-color: #9747FF;

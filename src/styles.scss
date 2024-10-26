@@ -4,6 +4,10 @@
   font-family: Poppins;
 }
 
+html {
+  scroll-padding-top: 130px; /* Höhe der Navbar */
+}
+
 body {
   background-color: #141d2f;
   // height: 100vh;

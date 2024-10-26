@@ -63,13 +63,16 @@ nav {
         }
 
 
-        > span {
+        a {
             cursor: pointer;
             transition: 0.3s;
+            color: #fff;
+            text-decoration: none;
 
             &:hover {
                 color: #70E61C;
             }
+
         }
     }
 }
