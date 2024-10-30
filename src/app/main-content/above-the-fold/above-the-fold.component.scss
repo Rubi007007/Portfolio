@@ -292,6 +292,8 @@ section {
 
             .mail {
                 transition: 0.3s;
+                text-decoration: none;
+                color: #fff;
                 
                 &:hover {
                     cursor: pointer;
