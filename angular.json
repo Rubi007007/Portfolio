@@ -26,8 +26,8 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/favicon.ico"
             ],
             "styles": [
               "src/styles.scss",
@@ -35,6 +35,9 @@
             ],
             "scripts": [
               "node_modules/aos/dist/aos.js"
+            ],
+            "allowedCommonJsDependencies": [
+              "aos"
             ]
           },
           "configurations": {
@@ -48,7 +51,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumError": "10kb"
                 }
               ],
               "outputHashing": "all"

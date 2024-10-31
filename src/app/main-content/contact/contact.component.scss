@@ -190,13 +190,13 @@ section {
 
                     .valid-input {
                         border: 1px solid #70E61C;
-                        background-image: url(/assets/img/contact-me/checked.png);
+                        background-image: url('./../../../assets/img/contact-me/checked.svg');
                         background-position: right 20px top 14px;
                         background-repeat: no-repeat;
                     }
 
                     .invalid-input {
-                        background-image: url(/assets/img/contact-me/invalid.png);
+                        background-image: url('./../../../assets/img/contact-me/invalid.svg');
                         background-position: right 20px top 14px;
                         background-repeat: no-repeat;
 
@@ -219,7 +219,7 @@ section {
                         min-height: 150px;
 
                         &::-webkit-resizer {
-                            background-image: url(/assets/img/contact-me/resizer.png);
+                            background-image: url('./../../../assets/img/contact-me/resizer.svg');
                         }
 
                         &::placeholder {
@@ -274,20 +274,20 @@ section {
                             padding: 0;
                             border: none;
                             border-radius: 0;
-                            background-image: url(/assets/img/contact-me/checkbox.png);
+                            background-image: url('./../../../assets/img/contact-me/checkbox.svg');
                             background-size: contain;
                             background-repeat: no-repeat;
 
                             &:hover {
-                                background-image: url(/assets/img/contact-me/checkbox_hover.png);
+                                background-image: url('./../../../assets/img/contact-me/checkbox_hover.svg');
                             }
                         }
 
                         .checked {
-                            background-image: url(/assets/img/contact-me/checkbox_checked.png) !important;
+                            background-image: url('./../../../assets/img/contact-me/checkbox_checked.svg') !important;
 
                             &:hover {
-                                background-image: url(/assets/img/contact-me/checkbox_checked_hover.png) !important;
+                                background-image: url('./../../../assets/img/contact-me/checkbox_checked_hover.svg') !important;
                             }
                         }
 
@@ -356,10 +356,10 @@ section {
                             height: 39px;
                             cursor: pointer;
                             transition: 0.3s;
-                            background-image: url(/assets/img/contact-me/go-up-btn.png);
+                            background-image: url('./../../../assets/img/contact-me/go-up-btn.png');
 
                             &:hover {
-                                background-image: url(/assets/img/contact-me/go-up-btn-hover.png);
+                                background-image: url('./../../../assets/img/contact-me/go-up-btn-hover.png');
                             }
                         }
                     }
@@ -427,10 +427,10 @@ section {
     height: 39px;
     cursor: pointer;
     transition: 0.3s;
-    background-image: url(/assets/img/contact-me/go-up-btn.png);
+    background-image: url('./../../../assets/img/contact-me/go-up-btn.png');
 
     &:hover {
-        background-image: url(/assets/img/contact-me/go-up-btn-hover.png);
+        background-image: url('./../../../assets/img/contact-me/go-up-btn-hover.png');
     }
     
     @media (max-width: 700px) {
