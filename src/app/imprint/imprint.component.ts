@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-imprint',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent {
-
+  constructor(private titleService: Title) {
+    this.titleService.setTitle('Impressum - R. Schmittel');
+  }
 }

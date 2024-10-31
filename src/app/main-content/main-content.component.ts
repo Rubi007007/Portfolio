@@ -5,6 +5,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { ContactComponent } from './contact/contact.component';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-main-content',
@@ -14,5 +15,7 @@ import { ContactComponent } from './contact/contact.component';
   styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {
-
+  constructor(private titleService: Title) {
+    this.titleService.setTitle('Portfolio - R. Schmittel');
+  }
 }

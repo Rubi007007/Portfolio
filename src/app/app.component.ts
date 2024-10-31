@@ -18,9 +18,9 @@ export class AppComponent implements OnInit{
 
   ngOnInit() {
     AOS.init({
-      duration: 1000, // Dauer der Animation in Millisekunden
-      once: true, // Animation nur einmal abspielen
-      mirror: false // Animationen beim Scrollen nach oben abspielen
+      duration: 1000,
+      once: true,
+      mirror: false
     });
   }
 }
