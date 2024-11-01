@@ -1,15 +1,23 @@
 footer {
+    width: 100%;
+    border-top: 4px solid #70E61C;
+    position: relative;
+    z-index: 900;
+    display: flex;
+    justify-content: center;
+    background-color: #141d2f;
+}
+
+section {
     height: 291px;
     width: 100%;
+    max-width: 1920px;
     position: relative;
-    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     color: #fff;
     font-size: 23px;
-    border-top: 4px solid #70E61C;
-    background-color: #141d2f;
 
     @media (max-width: 750px) {
         flex-direction: column;

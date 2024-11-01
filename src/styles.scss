@@ -6,7 +6,7 @@
 }
 
 html {
-  scroll-padding-top: 130px; /* Höhe der Navbar */
+  scroll-padding-top: 130px;
 }
 
 body {
@@ -19,7 +19,6 @@ body {
   display: flex;
   justify-content: center;
   gap: 35%;
-  max-width: 2560px;
   width: 100%;
   overflow: hidden;
 
