@@ -42,6 +42,30 @@ section {
     color: #fff;
     margin-top: 200px;
 
+    @media (max-height: 710px) {
+        margin-top: 100px;
+    }
+
+    @media (max-height: 625px) {
+        margin-top: 68px;
+    }
+
+    @media (max-height: 575px) {
+        margin-top: 28px;
+    }
+
+    @media (max-height: 450px) {
+        margin-top: 0;
+    }
+
+    @media (max-height: 405px) {
+        margin-top: -25px;
+    }
+
+    @media (max-height: 375px) {
+        margin-top: -43px;
+    }
+
     .slogan-area {
         position: relative;
         left: -38px;
@@ -136,16 +160,6 @@ section {
                     text-transform: uppercase;
                     color: #9747FF;
                     white-space: nowrap;
-
-                    @media (max-width: 1350px) {
-                        // font-size: 50px;
-                        // line-height: 60px;
-                    }
-
-                    @media (max-width: 1050px) {
-                        // font-size: 40px;
-                        // line-height: 50px;
-                    }
                 }
             }
         }
@@ -171,6 +185,14 @@ section {
             border-style: none;
             transition: transform 100ms ease-out, background-color 100ms ease-out;
             transform-origin: top left;
+
+            @media (max-height: 625px) {
+                top: auto;
+            }
+
+            @media (min-width: 600px) and (max-height: 625px) {
+                top: 205px;
+            }
 
             a {
                 text-decoration: none;
