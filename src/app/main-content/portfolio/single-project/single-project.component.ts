@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-single-project',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './single-project.component.html',
   styleUrl: './single-project.component.scss'
 })
@@ -24,5 +25,9 @@ export class SingleProjectComponent {
   sendInputData() {
     this.projectname.emit(this.inputData);
     this.inputData = "";
+  }
+
+  openExternalLink(url: string) {
+    window.open(url, '_blank', 'noopener,noreferrer');
   }
 }

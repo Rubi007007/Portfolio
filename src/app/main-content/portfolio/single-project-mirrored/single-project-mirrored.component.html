@@ -6,8 +6,12 @@
             <span class="description">{{project.description}}</span>
         </div>
         <div class="project-btns">
-            <button class="btn btn-test">Live test</button>
-            <button class="btn btn-git">Github</button>
+            <div class="btn btn-test" (click)="openExternalLink('https://ruben-schmittel.developerakademie.net/projects/join/login.html')">
+                <span>Live test</span>
+            </div>
+            <div class="btn btn-git" (click)="openExternalLink('https://github.com/DaveMage/Join-229')">
+                <span>Github</span>
+            </div>
         </div>
     </div>
     <div class="project-img">
