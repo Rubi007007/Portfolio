@@ -1,0 +1,39 @@
+img {
+    position: absolute;
+    top: 336px;
+    left: 0;
+    width: 100%;
+    height: auto;
+
+    @media (max-width: 3724px) {
+        top: 435px;
+    }
+
+    @media (max-width: 3000px) {
+        top: 526px;
+    }
+
+    @media (max-width: 2230px) {
+        top: 614px;
+    }
+
+    @media (max-width: 1570px) {
+        top: 697px;
+    }
+
+    @media (max-width: 1300px) {
+        top: 564px;
+    }
+
+    @media (max-width: 750px) {
+        top: 495px;
+    }
+
+    @media (max-width: 450px) {
+        top: 455px;
+    }
+
+    @media (max-width: 320px) {
+        top: 440px;
+    }
+}

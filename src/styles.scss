@@ -55,6 +55,44 @@ body {
   }
 }
 
+.bg-snippet {
+  position: absolute;
+  top: 1628px;
+  width: 100%;
+
+  @media (max-width: 3830px) {
+    top: 1726px;
+  }
+
+  @media (max-width: 3000px) {
+    top: 1797px;
+  }
+
+  @media (max-width: 2410px) {
+    top: 1870px;
+  }
+
+  @media (max-width: 2030px) {
+    top: 1910px;
+  }
+
+  @media (max-width: 1500px) {
+    top: 1969px;
+  }
+
+  @media (max-width: 1300px) {
+    top: 1818px;
+  }
+
+  @media (max-width: 750px) {
+    top: 1760px;
+  }
+
+  @media (max-width: 430px) {
+    top: 1738px;
+  }
+}
+
 /*::-webkit-scrollbar {
   width: 12px;
 }
