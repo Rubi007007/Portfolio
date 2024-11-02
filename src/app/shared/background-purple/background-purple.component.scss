@@ -1,27 +1,29 @@
 .purple-shadow {
-    // position: absolute;
-    // top: -60px;
-    // right: -272px;
-
-    // z-index: -1;
-
-    // position: absolute;
-    // right: 0;
-    // bottom: 500px;
+    position: absolute;
+    left: -432px;
+    bottom: -229px;
 
     @media (max-width: 1300px) {
-
+        left: -467px;
+        bottom: -419px;
     }
 
-    @media (max-width: 900px) {
-
+    @media (max-width: 1000px) {
+        width: 800px;
+        height: auto;
+        left: -215px;
+        bottom: -351px;
     }
 
-    @media (max-width: 630px) {
-
+    @media (max-width: 700px) {
+        width: 600px;
+        left: -215px;
+        bottom: -277px;
     }
 
-    @media (max-width: 600px) {
-
+    @media (max-width: 410px) {
+        width: 500px;
+        left: -215px;
+        bottom: -277px;
     }
 }

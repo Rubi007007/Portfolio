@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BackgroundPurpleComponent } from '../../shared/background-purple/background-purple.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, BackgroundPurpleComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })

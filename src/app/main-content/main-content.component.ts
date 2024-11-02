@@ -6,11 +6,12 @@ import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { ContactComponent } from './contact/contact.component';
 import { Title } from '@angular/platform-browser';
+import { BackgroundPurpleComponent } from '../shared/background-purple/background-purple.component';
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [CommonModule, AboveTheFoldComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactComponent],
+  imports: [CommonModule, AboveTheFoldComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactComponent, BackgroundPurpleComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })

@@ -11,6 +11,10 @@ html {
 
 body {
   background-color: #141d2f;
+
+  @media (min-width: 1300px) {
+    // overflow-x: hidden;
+  }
 }
 
 .background-splash {
