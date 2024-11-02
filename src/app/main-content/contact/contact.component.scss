@@ -4,6 +4,7 @@ section {
     max-width: 1920px;
     padding: 0 100px 0 100px;
     display: flex;
+    z-index: 10;
     flex-direction: column;
     
     @media (max-width: 700px) {
