@@ -1,6 +1,5 @@
 <section id="contact">
     <app-background-purple></app-background-purple>
-    <!-- <img class="shadow" src="./assets/img/background/purple-shadow-contact.png" alt="purple-shadow"> -->
     <div class="header" data-aos="fade-right" data-aos-delay="800">
         <div class="headline">
             <div class="dividing-line-left"></div>
@@ -31,7 +30,7 @@
                     <span class="span-input" [ngClass]="{'invalid': isNameInvalid}">Your name is required</span>
                 </div>
                 <div>
-                    <input (input)="checkValidMail()" (focusout)="checkValueMail()" #email [ngClass]="{'invalid-input': isMailInvalid, 'valid-input': isMailValid}" id="email" name="email" type="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" autocomplete="off" required placeholder="Your email ...">
+                    <input (input)="checkValidMail()" (focusout)="checkValueMail()" #email [ngClass]="{'invalid-input': isMailInvalid, 'valid-input': isMailValid}" id="email" name="email" type="email" pattern="^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" autocomplete="off" required placeholder="Your email ...">
                     <span class="span-input" [ngClass]="{'invalid': isMailInvalid}">Your email in the correct format is required</span>
                 </div>
                 <div>
