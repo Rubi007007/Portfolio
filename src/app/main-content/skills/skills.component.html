@@ -1,5 +1,4 @@
 <section id="skills">
-    <!-- <img class="shadow" src="./assets/img/background/green-shadow.png" alt="green-shadow"> -->
     <div class="skill-section skill-section-desktop" data-aos="fade-right" data-aos-delay="300">
         @for (singleSkill of skillsData.skills; track singleSkill.name; let index = $index) {
             @if (index < skillsData.skills.length - 1) {
@@ -11,27 +10,22 @@
     </div>
     <div class="journey journey-desktop">
         <div class="headline" data-aos="fade-left" data-aos-delay="300">
-            <h2>Skills</h2>
+            <h2>{{ 'skills' | translate }}</h2>
             <div class="dividing-line"></div>
         </div>
         <div class="journey-text" data-aos="fade-left" data-aos-delay="300">
             <p>
-                My journey has involved working on diverse projects,
-                employing a range of frontend technologies and concepts.
-                I am open to embracing new technologies and methodologies
-                to Continously enhance my skills and stay ahead in the
-                ever-evolving landscape of web development.
+                {{ 'skills-desc' | translate }}
             </p>
             <div class="journey-subtext">
-                <h3>Looking for <span>another skill</span>?</h3>
+                <h3>{{ 'skills-looking' | translate }}<span>{{ 'skills-other' | translate }}</span>?</h3>
                 <p>
-                    Feel free to contact me. I look forward to expanding
-                    on my previous knowledge.
+                    {{ 'skills-other-desc' | translate }}
                 </p>
             </div>
         </div>
         <a class="btn btn-desktop" href="#contact">
-            <span>Get in touch</span>
+            <span>{{ 'get-in-touch' | translate }}</span>
         </a>
     </div>
     <app-background-green></app-background-green>
@@ -39,13 +33,12 @@
     <!-- MOBILE -->
     <div class="journey journey-mobile">
         <div class="headline" data-aos="fade-left" data-aos-delay="300">
-            <h2>Skills</h2>
+            <h2>{{ 'skills' | translate }}</h2>
             <div class="dividing-line"></div>
         </div>
         <div class="journey-text-mobile" data-aos="fade-left" data-aos-delay="300">
             <p>
-                I have gained experience in building projects with
-                various front end technologies and concepts.
+                {{ 'skills-mobile' | translate }}
             </p>
         </div>
     </div>
@@ -59,13 +52,12 @@
 
     </div>
     <div class="journey-subtext-mobile" data-aos="fade-left" data-aos-delay="300">
-        <h3>Looking for <span>another skill</span>?</h3>
+        <h3>{{ 'skills-looking' | translate }}<span>{{ 'skills-other' | translate }}</span>?</h3>
         <p>
-            Feel free to contact me. I look forward to expanding
-            on my previous knowledge.
+            {{ 'skills-other-desc' | translate }}
         </p>
     </div>
     <a class="btn btn-mobile" href="#contact" data-aos="fade-left" data-aos-delay="300">
-        <span>Get in touch</span>
+        <span>{{ 'get-in-touch' | translate }}</span>
     </a>
 </section>

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Renderer2, ElementRef, ViewChild } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -12,8 +13,12 @@ export class HeaderComponent {
   isOverlayVisible = false;
   isClosing = false;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private translate: TranslateService) {}
   @ViewChild('menu', { static: true }) menu!: ElementRef;
+
+  changeLanguage(lang: string) {
+    this.translate.use(lang);
+  }
 
   toggleOverlay() {
     this.isOverlayVisible = !this.isOverlayVisible;

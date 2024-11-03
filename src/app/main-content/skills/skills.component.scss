@@ -51,10 +51,7 @@ section {
     }
     
     .shadow {
-        // display: none;
-
         @media (max-width: 1300px) {
-            // display: block;
             position: absolute;
             left: 0;
             bottom: -730px;
@@ -163,7 +160,9 @@ section {
 
 .btn {
     margin-top: 72px;
-    width: 200px !important;
+    width: fit-content !important;
+    padding-right: 30px;
+    padding-left: 30px;
     height: 58px;
     border-radius: 10px;
     text-decoration: none;
@@ -283,7 +282,9 @@ section {
 
 .btn-mobile {
     order: 2;
-    width: 158px;
+    width: fit-content;
+    padding-right: 30px !important;
+    padding-left: 30px !important;
     height: 49px;
     font-size: 16px;
     font-weight: 400;

@@ -4,5 +4,6 @@
     <div class="special-interest"></div>
     <div *ngIf="skill.number === 11" class="skill-icon skill-{{skill.number}}"></div>
 
-    <span class="skill-name skill-name-{{skill.number}}">{{skill.name}}</span>
+    <span *ngIf="skill.number !== 11" class="skill-name skill-name-{{skill.number}}">{{skill.name}}</span>
+    <span *ngIf="skill.number === 11" class="skill-name skill-name-{{skill.number}}">{{ 'continually learning' | translate }}</span>
 </div>

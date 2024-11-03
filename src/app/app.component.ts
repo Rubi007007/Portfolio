@@ -5,8 +5,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { MainContentComponent } from "./main-content/main-content.component";
 import { HeaderComponent } from './shared/header/header.component';
 import { Router, NavigationEnd } from '@angular/router';
-import AOS from 'aos';
 import { ImprintComponent } from "./imprint/imprint.component";
+import { TranslateService } from '@ngx-translate/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,13 @@ export class AppComponent implements OnInit{
   title = 'portfolio';
   showBackground: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private translate: TranslateService) {
+    this.translate.addLangs(['en', 'de']);
+    this.translate.setDefaultLang('en');
+
+    const browserLang = this.translate.getBrowserLang();
+    this.translate.use(browserLang && browserLang.match(/en|de/) ? browserLang : 'en');
+  }
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
