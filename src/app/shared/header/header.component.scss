@@ -29,7 +29,7 @@ section {
             color: #fff;
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 880px) {
             margin-left: 25px;
         }
     }
@@ -41,12 +41,13 @@ section {
         gap: 29px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
-        @media (max-width: 700px) {
+        @media (max-width: 880px) {
             margin-right: 25px;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 690px) {
             display: none;
         }
         
@@ -92,7 +93,7 @@ section {
 .mobile-menu {
     display: none;
 
-    @media (max-width: 600px) {
+    @media (max-width: 690px) {
         display: flex;
         margin-right: 25px;
         cursor: pointer;
@@ -154,4 +155,16 @@ section {
 .menu a.active::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+.flag-btn {
+    background-color: transparent;
+    border: none;
+
+    img {
+        width: 32px;
+        margin-top: 7px;
+        cursor: pointer;
+    }
+
 }

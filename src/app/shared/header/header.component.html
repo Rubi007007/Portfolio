@@ -4,11 +4,15 @@
             <a href="#atf"><span>R<span class="purple">u</span>be<span class="green">n</span></span></a>
         </div>
         <div class="menu" #menu (click)="setActiveLink($event)">
-            <a href="#about-me-section">About me</a>
+            <a href="#about-me-section">{{ 'nav-aboutme' | translate }}</a>
             <a href="#skills">Skills</a>
             <a href="#portfolio">Portfolio</a>
-            <button (click)="changeLanguage('en')">English</button>
-            <button (click)="changeLanguage('de')">Deutsch</button>
+            <button class="flag-btn" (click)="changeLanguage('en')">
+                <img class="flag english" src="assets/img/navbar/english-flag.png" alt="location">
+            </button>
+            <button class="flag-btn" (click)="changeLanguage('de')">
+                <img class="flag english" src="assets/img/navbar/german-flag.png" alt="location">
+            </button>
         </div>
         <div class="mobile-menu" (click)="toggleOverlay()">
             <img src="assets/img/navbar/burger-menu.svg" alt="">
@@ -21,5 +25,13 @@
       <a href="#about-me" (click)="closeOverlay()">About me</a>
       <a href="#skills" (click)="closeOverlay()">Skills</a>
       <a href="#portfolio" (click)="closeOverlay()">Portfolio</a>
+      <div>
+          <button class="flag-btn" (click)="changeLanguage('en')">
+            <img class="flag english" src="assets/img/navbar/english-flag.png" alt="location">
+            </button>
+            <button class="flag-btn" (click)="changeLanguage('de')">
+                <img class="flag english" src="assets/img/navbar/german-flag.png" alt="location">
+            </button>
+      </div>
     </div>
 </div>

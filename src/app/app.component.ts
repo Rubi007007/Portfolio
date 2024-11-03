@@ -31,7 +31,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.showBackground = event.url === '/' || event.url === '/#atf' || event.url === '/#about-me-section' || event.url === '/#skills' || event.url === '/#portfolio'; // Passe '/home' ggf. an die Landing Page an
+        this.showBackground = event.url === '/' || event.url === '/#atf' || event.url === '/#about-me-section' || event.url === '/#skills' || event.url === '/#portfolio' || event.url === '/#about-me';
       }
     });
 
