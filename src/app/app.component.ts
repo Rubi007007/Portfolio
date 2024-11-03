@@ -24,8 +24,7 @@ export class AppComponent implements OnInit{
     this.translate.addLangs(['en', 'de']);
     this.translate.setDefaultLang('en');
 
-    const browserLang = this.translate.getBrowserLang();
-    this.translate.use(browserLang && browserLang.match(/en|de/) ? browserLang : 'en');
+    this.translate.use('en');
   }
 
   ngOnInit(): void {
