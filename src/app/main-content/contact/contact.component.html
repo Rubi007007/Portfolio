@@ -3,47 +3,47 @@
     <div class="header" data-aos="fade-right" data-aos-delay="800">
         <div class="headline">
             <div class="dividing-line-left"></div>
-            <h2>Contact</h2>
+            <h2>{{ 'contact' | translate }}</h2>
         </div>
     </div>
     <div class="content">
         <div class="got-a-problem" data-aos="fade-right" data-aos-delay="800">
             <div class="subheadline">
                 <div class="dividing-line-subhead"></div>
-                <h3>Got a problem to solve?</h3>
+                <h3>{{ 'contact-subhead' | translate }}</h3>
             </div>
             <div class="text">
                 <p>
-                    Contact me through this form, I am interested in hearing
-                    <br> from you, knowing your ideas and contributing to your
-                    <br> projects with my work.
+                    {{ 'contact-desc-first' | translate }}
+                    <br> {{ 'contact-desc-second' | translate }}
+                    <br> {{ 'contact-desc-third' | translate }}
                 </p>
                 <p>
-                    Need a Frontend developer? <span>Contact me!</span>
+                    {{ 'contact-desc-fourth' | translate }} <span>{{ 'contact-desc-fifth' | translate }}</span>
                 </p>
             </div>
         </div>
         <div class="contact-me" data-aos="fade-left" data-aos-delay="800">
             <form novalidate (ngSubmit)="onSubmit($event)">
                 <div>
-                    <input (input)="checkValidName()" (focusout)="checkValueName()" #name [ngClass]="{'invalid-input': isNameInvalid, 'valid-input': isNameValid}" id="name" name="name" type="text" autocomplete="off" required placeholder="Your name ...">
-                    <span class="span-input" [ngClass]="{'invalid': isNameInvalid}">Your name is required</span>
+                    <input (input)="checkValidName()" (focusout)="checkValueName()" #name [ngClass]="{'invalid-input': isNameInvalid, 'valid-input': isNameValid}" id="name" name="name" type="text" autocomplete="off" required placeholder="{{ 'name' | translate }}">
+                    <span class="span-input" [ngClass]="{'invalid': isNameInvalid}">{{ 'error-name' | translate }}</span>
                 </div>
                 <div>
-                    <input (input)="checkValidMail()" (focusout)="checkValueMail()" #email [ngClass]="{'invalid-input': isMailInvalid, 'valid-input': isMailValid}" id="email" name="email" type="email" pattern="^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" autocomplete="off" required placeholder="Your email ...">
-                    <span class="span-input" [ngClass]="{'invalid': isMailInvalid}">Your email in the correct format is required</span>
+                    <input (input)="checkValidMail()" (focusout)="checkValueMail()" #email [ngClass]="{'invalid-input': isMailInvalid, 'valid-input': isMailValid}" id="email" name="email" type="email" pattern="^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" autocomplete="off" required placeholder="{{ 'email' | translate }}">
+                    <span class="span-input" [ngClass]="{'invalid': isMailInvalid}">{{ 'error-mail' | translate }}</span>
                 </div>
                 <div>
-                    <textarea (input)="checkValidMessage()" (focusout)="checkValueMessage()" #message [ngClass]="{'invalid-input': isMessageInvalid, 'valid-input': isMessageValid}" id="message" cols="30" rows="10" name="message" type="email" required placeholder="Your message ..."></textarea>
-                    <span class="span-input" [ngClass]="{'invalid': isMessageInvalid}">Your message is empty</span>
+                    <textarea (input)="checkValidMessage()" (focusout)="checkValueMessage()" #message [ngClass]="{'invalid-input': isMessageInvalid, 'valid-input': isMessageValid}" id="message" cols="30" rows="10" name="message" type="email" required placeholder="{{ 'message' | translate }}"></textarea>
+                    <span class="span-input" [ngClass]="{'invalid': isMessageInvalid}">{{ 'error-message' | translate }}</span>
                 </div>
                 <div class="terms">
                     <div class="checkbox">
                         <input (click)="toggleCheckbox()" [ngClass]="{'checked': isCheckboxChecked}" #checkbox type="checkbox" name="checkbox" required>
-                        <span class="policy">I've read the <a href="privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                        <span class="policy">{{ 'privacy-policy-read' | translate }}<a href="privacy-policy">{{ 'privacy-policy-text' | translate }}</a>{{ 'privacy-policy-agree' | translate }}</span>
                     </div>
                     <div class="btn">
-                        <input type="submit" value="Send message" class="btn-submit" [disabled]="!isFormValid">
+                        <input type="submit" value="{{ 'send-message' | translate }}" class="btn-submit" [disabled]="!isFormValid">
                         <div class="go-up-btn" (click)="goToTop()"></div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
     </div>
     <div class="overlay" [ngClass]="{'visible': isVisible}" *ngIf="isMailSent"></div>
     <div class="confirmation-message" [ngClass]="{'visible': isVisible}" *ngIf="isMailSent">
-        <p>Your message has been sent successfully!</p>
+        <p>{{ 'send-message-text' | translate }}</p>
     </div>
     <div class="mobile-up-btn" (click)="goToTop()"></div>
 </section>

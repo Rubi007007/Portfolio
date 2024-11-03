@@ -29,7 +29,7 @@ export class SingleProjectMirroredComponent {
   constructor(private translate: TranslateService) {}
 
   ngOnInit() {
-    this.updateDescription(); // Bei Initialisierung die Beschreibung setzen
+    this.updateDescription();
 
     // Abonnieren von Sprachänderungen
     this.translate.onLangChange.subscribe(() => {
@@ -40,7 +40,7 @@ export class SingleProjectMirroredComponent {
   private updateDescription() {
     if (this.project) {
       this.translate.get(this.project.descriptionKey).subscribe((translatedText: string) => {
-        this.description = translatedText; // Setzen der Übersetzung auf die Property
+        this.description = translatedText;
       });
     }
   }
