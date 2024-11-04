@@ -17,7 +17,10 @@ section {
         }
 
         .journey {
+            padding: 0 0 0 40px;
             order: 0;
+            width: 100%;
+            align-items: flex-end;
         }
     }
 
@@ -30,7 +33,11 @@ section {
         }
 
         .journey {
+            padding: 0;
             order: 0;
+            width: 100%;
+            overflow-x: visible;
+            align-items: center;
         }
     }
     
@@ -98,6 +105,10 @@ section {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+
+    @media (max-width: 900px) {
+        // margin-left: -247px;
+    }
     
     .headline {
         display: flex;
@@ -144,8 +155,9 @@ section {
             margin-right: 40px;
         }
 
-        @media (max-width: 600px) {
-            margin-right: 0;
+        @media (max-width: 900px) {
+            margin-right: 40px;
+            text-align: end;
         }
         
         p {
@@ -171,11 +183,6 @@ section {
                 margin-top: 16px;
             }
         }
-    }
-
-    @media (max-width: 600px) {
-        width: 100%;
-        overflow-x: visible;
     }
 }
 
@@ -204,6 +211,10 @@ section {
     &:hover {
         transform: scale(1.16);
         background-color: #9747FF;
+    }
+
+    @media (max-width: 900px) {
+        margin-right: 40px;
     }
 }
 
@@ -330,17 +341,13 @@ app-background-green {
     left: -594px;
     z-index: -1;
 
-    @media (max-width: 1300px) {
-        top: 783px;
-        left: -435px;
-    }
-
     @media (max-width: 900px) {
+        top: 783px;
         left: -590px;
     }
 
-    @media (max-width: 630px) {
-        left: -675px;
+    @media (max-width: 683px) {
+        top: 947px;
     }
 
     @media (max-width: 600px) {

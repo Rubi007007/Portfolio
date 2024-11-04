@@ -6,12 +6,12 @@
                 <h2>Portfolio</h2>
                 <div class="dividing-line-right"></div>
             </div>
-            <p>
-                {{ 'portfolio-desc' | translate }} <br class="text-break">
-                {{ 'portfolio-desc-second' | translate }}
-            </p>
         </div>
     </div>
+    <p>
+        {{ 'portfolio-desc' | translate }} <br>
+        {{ 'portfolio-desc-second' | translate }}
+    </p>
     <div class="projects">
         @for (singleProject of projectsData.projects; track singleProject.name; let index = $index) {
             @if (index % 2 === 0) {

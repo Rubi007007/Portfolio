@@ -95,53 +95,49 @@ section {
                     }
                 }
             }
-    
-            p {
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 19.2px;
-                margin-top: 40px;
-                display: flex;
-                justify-content: flex-start;
-                align-items: flex-start;
-                width: 100%;
-                word-break: break-word;
-
-                @media (max-width: 700px) {
-                    justify-content: center;
-                    text-align: center;
-                }
-
-                @media (max-width: 550px) {
-                    margin-top: 32px;
-                }
-
-                @media (max-width: 350px) {
-                    width: 80%;
-                }
-
-                .text-break {
-                    display: none;
-    
-                    @media (max-width: 700px) {
-                        display: block;
-                    }
-                }
-            }
         }
     }
 
 
     .projects {
         margin-bottom: 124px;
-        margin-top: 180px;
-
-        @media (max-width: 850px) {
-            margin-top: 0;
-        }
 
         @media (max-width: 550px) {
             width: 100%;
+        }
+    }
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    width: 100%;
+    word-break: break-word;
+    text-align: center;
+    margin-top: 128px;
+    color: #fff;
+
+    @media (max-width: 700px) {
+        justify-content: center;
+    }
+
+    @media (max-width: 550px) {
+        margin-top: 32px;
+    }
+
+    @media (max-width: 350px) {
+        width: 80%;
+    }
+
+    .text-break {
+        display: none;
+
+        @media (max-width: 700px) {
+            display: block;
         }
     }
 }
