@@ -21,6 +21,12 @@ export class HeaderComponent {
     localStorage.setItem('language', lang);
   }
 
+  changeLanguageMobile(lang: string) {
+    this.translate.use(lang);
+    localStorage.setItem('language', lang);
+    this.closeOverlay();
+  }
+
   toggleOverlay() {
     this.isOverlayVisible = !this.isOverlayVisible;
     if (this.isOverlayVisible) {
