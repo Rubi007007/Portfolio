@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router, NavigationEnd } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -10,8 +10,18 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })
-export class ImprintComponent {
-  constructor(private titleService: Title) {
+export class ImprintComponent implements OnInit {
+  constructor(private titleService: Title, private router: Router) {
     this.titleService.setTitle('Impressum - R. Schmittel');
+  }
+
+  ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
   }
 }

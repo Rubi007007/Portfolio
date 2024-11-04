@@ -23,7 +23,6 @@ export class AppComponent implements OnInit{
   constructor(private router: Router, private translate: TranslateService) {
     this.translate.addLangs(['en', 'de']);
     this.translate.setDefaultLang('en');
-
     this.translate.use('en');
   }
 
